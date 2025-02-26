@@ -3,7 +3,7 @@ from datetime import datetime, timedelta
 import random
 
 
-def generate_mock_fhir_data(num_patients=100):
+def generate_mock_fhir_data(num_patients=12):
     fhir_data = []
     for i in range(1, num_patients + 1):
         patient = {
@@ -37,7 +37,7 @@ def generate_mock_fhir_data(num_patients=100):
 
 
 def save_mock_data(fhir_data):
-    with open("mock_fhir_data.json", "w") as f:
+    with open("mock_data/fhir_data.json", "w") as f:
         json.dump(fhir_data, f, indent=4)
 
 
