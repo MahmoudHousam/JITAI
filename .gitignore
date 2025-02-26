@@ -1,6 +1,2 @@
 jitai_venv
-mock_fhir_data.json
-mock_wearable_data.json
-apple_watch_data.json
-fitbit_data.json
-garmin_data.json
+mock_data
