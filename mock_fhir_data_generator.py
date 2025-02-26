@@ -3,7 +3,6 @@ from datetime import datetime, timedelta
 import random
 
 
-# Function to generate mock FHIR data
 def generate_mock_fhir_data(num_patients=100):
     fhir_data = []
     for i in range(1, num_patients + 1):
@@ -37,40 +36,11 @@ def generate_mock_fhir_data(num_patients=100):
     return fhir_data
 
 
-# Function to generate mock wearable device data
-def generate_mock_wearable_data(num_users=100, num_records_per_user=5):
-    wearable_data = []
-    for i in range(1, num_users + 1):
-        for _ in range(num_records_per_user):
-            record = {
-                "user_id": f"U{i:03d}",  # U001, U002, etc.
-                "timestamp": (
-                    datetime.now() - timedelta(hours=random.randint(1, 24))
-                ).isoformat()
-                + "Z",
-                "heart_rate_bpm": random.randint(60, 100),
-                "hrv_ms": random.randint(20, 100),
-                "sleep_stage": random.choice(["light", "deep", "REM"]),
-                "steps_count": random.randint(0, 10000),
-            }
-            wearable_data.append(record)
-    return wearable_data
-
-
-# Save mock data to JSON files
-def save_mock_data(fhir_data, wearable_data):
+def save_mock_data(fhir_data):
     with open("mock_fhir_data.json", "w") as f:
         json.dump(fhir_data, f, indent=4)
-    with open("mock_wearable_data.json", "w") as f:
-        json.dump(wearable_data, f, indent=4)
 
 
-# Main function
 if __name__ == "__main__":
-    # Generate mock data
     fhir_data = generate_mock_fhir_data()
-    wearable_data = generate_mock_wearable_data()
-
-    # Save mock data to JSON files
-    save_mock_data(fhir_data, wearable_data)
-    print("Mock FHIR data and wearable data generated and saved to JSON files.")
+    save_mock_data(fhir_data)
