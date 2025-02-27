@@ -1,0 +1,26 @@
+[
+    {
+        "user_id": "P005",
+        "timestamp": "2025-02-26T16:12:54.789425Z",
+        "heartRate": 66,
+        "hrv": 71,
+        "sleep": "deep",
+        "steps": 5820
+    },
+    {
+        "user_id": "P001",
+        "timestamp": "2025-02-26T11:12:54.787415Z",
+        "heart_rate_bpm": 84,
+        "hrv_ms": 45,
+        "sleep_stage": "light",
+        "steps_count": 9686
+    },
+    {
+        "user_id": "P009",
+        "timestamp": "2025-02-26T15:12:54.790878Z",
+        "bpm": 78,
+        "hrv": 25,
+        "sleep_score": 60,
+        "steps_taken": 9007
+    }
+]
