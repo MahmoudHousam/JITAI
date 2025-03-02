@@ -3,6 +3,7 @@ from datetime import datetime
 from fhir.resources.patient import Patient
 from fhir.resources.condition import Condition
 from fhir.resources.observation import Observation
+from fhir.resources.fhirabstractmodel import FHIRAbstractModel
 from fhir.resources.medicationstatement import MedicationStatement
 
 
@@ -85,9 +86,10 @@ def create_diabetic_hypertensive_resource():
 
 
 # Convert to JSON
-samer_resources = [
-    resource.dict() for resource in create_diabetic_hypertensive_resource()
-]
-print(samer_resources)
-# with open("mock_fhir_data/diabetic_hypertensive.json", "w") as f:
-#     json.dump(samer_resources, f, indent=4)
+samer_resources = create_diabetic_hypertensive_resource()
+json_data = json.dumps(
+    samer_resources, default=FHIRAbstractModel.json_encoder, indent=2
+)
+
+with open("mock_fhir_data/diabetic_hypertensive.json", "w") as json_file:
+    json_file.write(json_data)
