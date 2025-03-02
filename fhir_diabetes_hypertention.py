@@ -8,7 +8,7 @@ from fhir.resources.medicationstatement import MedicationStatement
 
 def create_diabetic_hypertensive_resource():
     # Patient Resource
-    patient = Patient.construct()
+    patient = Patient.model_construct()
     patient.id = "samer-123"
     patient.gender = "male"
     patient.birthDate = "1980-05-15"
@@ -20,7 +20,7 @@ def create_diabetic_hypertensive_resource():
     ]
 
     # Condition: Diabetes
-    condition = Condition.construct()
+    condition = Condition.model_construct()
     condition.id = "condition-1"
     condition.code = {
         "coding": [
@@ -43,43 +43,44 @@ def create_diabetic_hypertensive_resource():
     }
 
     # Glucose Observation
-    glucose = Observation.construct()
-    glucose.id = "glucose-1"
-    glucose.status = "final"
-    glucose.code = {
-        "coding": [
-            {"system": "http://loinc.org", "code": "2339-0", "display": "Glucose"}
-        ]
-    }
-    glucose.subject = {"reference": "Patient/samer-123"}
-    glucose.effectiveDateTime = "2023-10-05T08:00:00Z"
-    glucose.valueQuantity = {
-        "value": 210,
-        "unit": "mg/dL",
-        "system": "http://unitsofmeasure.org",
-    }
-    glucose.extension = [
-        {"url": "http://scrips.com/fhir/severity", "valueDecimal": 0.4},
-        {"url": "http://scrips.com/fhir/weight", "valueDecimal": 0.8},
-    ]
+    glucose = Observation.model_construct(
+        id="glucose-1",
+        status="final",
+        code={
+            "coding": [
+                {"system": "http://loinc.org", "code": "2339-0", "display": "Glucose"}
+            ]
+        },
+        subject={"reference": "Patient/samer-123"},
+        effectiveDateTime="2023-10-05T08:00:00Z",
+        valueQuantity={
+            "value": 210,
+            "unit": "mg/dL",
+            "system": "http://unitsofmeasure.org",
+        },
+        extension=[
+            {"url": "http://scrips.com/fhir/severity", "valueDecimal": 0.4},
+            {"url": "http://scrips.com/fhir/weight", "valueDecimal": 0.8},
+        ],
+    )
 
     # Missed SSRI Medication
-    med = MedicationStatement.construct()
-    med.id = "med-1"
-    med.status = "active"
-    med.medication = {
-        "coding": [
-            {
-                "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                "code": "329526",
-                "display": "Sertraline",
-            }
-        ]
-    }
-    med.subject = {"reference": "Patient/samer-123"}
-    med.taken = "n"
-    med.effectivePeriod = {"start": "2023-10-05T08:00:00Z"}
-
+    med = MedicationStatement.model_construct(
+        id="med-1",
+        status="active",
+        medication={
+            "coding": [
+                {
+                    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                    "code": "329526",
+                    "display": "Sertraline",
+                }
+            ]
+        },
+        subject={"reference": "Patient/samer-123"},
+        taken="n",
+        effectivePeriod={"start": "2023-10-05T08:00:00Z"},
+    )
     return [patient, condition, glucose, med]
 
 
@@ -87,6 +88,6 @@ def create_diabetic_hypertensive_resource():
 samer_resources = [
     resource.dict() for resource in create_diabetic_hypertensive_resource()
 ]
-
-with open("mock_fhir_data/diabetic_hypertensive.json", "w") as f:
-    json.dump(samer_resources, f, indent=2)
+print(samer_resources)
+# with open("mock_fhir_data/diabetic_hypertensive.json", "w") as f:
+#     json.dump(samer_resources, f, indent=4)
