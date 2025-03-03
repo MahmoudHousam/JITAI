@@ -1,9 +1,7 @@
 import json
-from datetime import datetime
 from fhir.resources.patient import Patient
 from fhir.resources.condition import Condition
 from fhir.resources.observation import Observation
-from fhir.resources.fhirabstractmodel import FHIRAbstractModel
 from fhir.resources.medicationstatement import MedicationStatement
 
 
@@ -85,11 +83,20 @@ def create_diabetic_hypertensive_resource():
     return [patient, condition, glucose, med]
 
 
+def custom_json_encoder(obj):
+    if hasattr(obj, "get_json_encoder"):
+        return obj.get_json_encoder()(obj)
+    elif isinstance(obj, bytes):
+        return obj.decode("utf-8")  # Convert bytes to string
+    else:
+        raise TypeError(
+            f"Object of type {obj.__class__.__name__} is not JSON serializable"
+        )
+
+
 # Convert to JSON
 samer_resources = create_diabetic_hypertensive_resource()
-json_data = json.dumps(
-    samer_resources, default=FHIRAbstractModel.json_encoder, indent=2
-)
+json_data = json.dumps(samer_resources, default=custom_json_encoder, indent=2)
 
 with open("mock_fhir_data/diabetic_hypertensive.json", "w") as json_file:
     json_file.write(json_data)
