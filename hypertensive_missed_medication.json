@@ -1,0 +1,94 @@
+[
+    {
+        "resourceType": "Patient",
+        "id": "ali-789",
+        "gender": "male",
+        "birthDate": "1990-07-22",
+        "extension": [
+            {
+                "url": "http://scrips.com/fhir/StructureDefinition/clinical-summary",
+                "valueString": "Hypertension (I10)"
+            }
+        ]
+    },
+    {
+        "resourceType": "Observation",
+        "id": "bp-1",
+        "code": {
+            "coding": [
+                {
+                    "system": "http://loinc.org",
+                    "code": "85354-9",
+                    "display": "Blood Pressure"
+                }
+            ]
+        },
+        "component": [
+            {
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "8462-4",
+                            "display": "Diastolic Blood Pressure"
+                        }
+                    ]
+                },
+                "valueQuantity": {
+                    "value": 95,
+                    "unit": "mmHg"
+                }
+            },
+            {
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "8480-6",
+                            "display": "Systolic Blood Pressure"
+                        }
+                    ]
+                },
+                "valueQuantity": {
+                    "value": 150,
+                    "unit": "mmHg"
+                }
+            }
+        ],
+        "subject": {
+            "reference": "Patient/ali-789"
+        },
+        "effectiveDateTime": "2023-10-05T12:00:00Z",
+        "extension": [
+            {
+                "url": "http://scrips.com/fhir/StructureDefinition/severity",
+                "valueDecimal": 0.5
+            },
+            {
+                "url": "http://scrips.com/fhir/StructureDefinition/weight",
+                "valueDecimal": 0.7
+            }
+        ]
+    },
+    {
+        "resourceType": "MedicationStatement",
+        "id": "med-2",
+        "status": "active",
+        "medication": {
+            "coding": [
+                {
+                    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                    "code": "202433",
+                    "display": "Metoprolol"
+                }
+            ]
+        },
+        "subject": {
+            "reference": "Patient/ali-789"
+        },
+        "taken": "n",
+        "effectivePeriod": {
+            "start": "2023-10-05T08:00:00Z"
+        }
+    }
+]

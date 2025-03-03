@@ -1,0 +1,84 @@
+[
+    {
+        "resourceType": "Patient",
+        "id": "abc-123",
+        "gender": "male",
+        "birthDate": "1980-05-15",
+        "extension": [
+            {
+                "url": "http://scrips.com/fhir/StructureDefinition/clinical-summary",
+                "valueString": "Type 2 Diabetes (E11.9), Hypertension (I10)"
+            }
+        ]
+    },
+    {
+        "resourceType": "Condition",
+        "id": "condition-1",
+        "code": {
+            "coding": [
+                {
+                    "system": "http://hl7.org/fhir/sid/icd-10",
+                    "code": "E11.9",
+                    "display": "Type 2 Diabetes Mellitus"
+                }
+            ]
+        },
+        "subject": {
+            "reference": "Patient/abc-123"
+        },
+        "clinicalStatus": "active"
+    },
+    {
+        "resourceType": "Observation",
+        "id": "glucose-1",
+        "code": {
+            "coding": [
+                {
+                    "system": "http://loinc.org",
+                    "code": "2339-0",
+                    "display": "Glucose"
+                }
+            ]
+        },
+        "subject": {
+            "reference": "Patient/abc-123"
+        },
+        "effectiveDateTime": "2023-10-05T08:00:00Z",
+        "valueQuantity": {
+            "value": 210,
+            "unit": "mg/dL",
+            "system": "http://unitsofmeasure.org"
+        },
+        "extension": [
+            {
+                "url": "http://scrips.com/fhir/StructureDefinition/severity",
+                "valueDecimal": 0.4
+            },
+            {
+                "url": "http://scrips.com/fhir/StructureDefinition/weight",
+                "valueDecimal": 0.8
+            }
+        ]
+    },
+    {
+        "resourceType": "MedicationStatement",
+        "id": "med-1",
+        "status": "active",
+        "medication": {
+            "coding": [
+                {
+                    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                    "code": "329526",
+                    "display": "Sertraline"
+                }
+            ]
+        },
+        "subject": {
+            "reference": "Patient/abc-123"
+        },
+        "taken": "n",
+        "effectivePeriod": {
+            "start": "2023-10-05T08:00:00Z"
+        }
+    }
+]
