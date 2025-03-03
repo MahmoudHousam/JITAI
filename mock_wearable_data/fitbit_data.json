@@ -1,0 +1,162 @@
+[
+    {
+        "user_id": "P001",
+        "timestamp": "2025-02-26T09:04:49.941933Z",
+        "heartRate": 96,
+        "hrv": 33,
+        "sleep": "light",
+        "steps": 6829
+    },
+    {
+        "user_id": "P001",
+        "timestamp": "2025-02-26T16:04:49.941959Z",
+        "heartRate": 83,
+        "hrv": 67,
+        "sleep": "REM",
+        "steps": 3891
+    },
+    {
+        "user_id": "P001",
+        "timestamp": "2025-02-26T15:04:49.941970Z",
+        "heartRate": 61,
+        "hrv": 33,
+        "sleep": "REM",
+        "steps": 734
+    },
+    {
+        "user_id": "P001",
+        "timestamp": "2025-02-26T15:04:49.941978Z",
+        "heartRate": 85,
+        "hrv": 83,
+        "sleep": "light",
+        "steps": 9637
+    },
+    {
+        "user_id": "P001",
+        "timestamp": "2025-02-26T21:04:49.941985Z",
+        "heartRate": 75,
+        "hrv": 45,
+        "sleep": "light",
+        "steps": 9518
+    },
+    {
+        "user_id": "P002",
+        "timestamp": "2025-02-26T08:04:49.941994Z",
+        "heartRate": 90,
+        "hrv": 100,
+        "sleep": "light",
+        "steps": 6850
+    },
+    {
+        "user_id": "P002",
+        "timestamp": "2025-02-26T08:04:49.942001Z",
+        "heartRate": 73,
+        "hrv": 63,
+        "sleep": "deep",
+        "steps": 7666
+    },
+    {
+        "user_id": "P002",
+        "timestamp": "2025-02-26T07:04:49.942007Z",
+        "heartRate": 76,
+        "hrv": 86,
+        "sleep": "REM",
+        "steps": 1179
+    },
+    {
+        "user_id": "P002",
+        "timestamp": "2025-02-26T14:04:49.942014Z",
+        "heartRate": 91,
+        "hrv": 82,
+        "sleep": "REM",
+        "steps": 8882
+    },
+    {
+        "user_id": "P002",
+        "timestamp": "2025-02-26T09:04:49.942021Z",
+        "heartRate": 61,
+        "hrv": 33,
+        "sleep": "light",
+        "steps": 591
+    },
+    {
+        "user_id": "P003",
+        "timestamp": "2025-02-27T01:04:49.942028Z",
+        "heartRate": 60,
+        "hrv": 32,
+        "sleep": "light",
+        "steps": 6656
+    },
+    {
+        "user_id": "P003",
+        "timestamp": "2025-02-26T13:04:49.942034Z",
+        "heartRate": 63,
+        "hrv": 68,
+        "sleep": "deep",
+        "steps": 9122
+    },
+    {
+        "user_id": "P003",
+        "timestamp": "2025-02-26T12:04:49.942041Z",
+        "heartRate": 81,
+        "hrv": 43,
+        "sleep": "deep",
+        "steps": 4010
+    },
+    {
+        "user_id": "P003",
+        "timestamp": "2025-02-26T07:04:49.942047Z",
+        "heartRate": 67,
+        "hrv": 60,
+        "sleep": "REM",
+        "steps": 2791
+    },
+    {
+        "user_id": "P003",
+        "timestamp": "2025-02-26T21:04:49.942054Z",
+        "heartRate": 84,
+        "hrv": 27,
+        "sleep": "light",
+        "steps": 8033
+    },
+    {
+        "user_id": "P004",
+        "timestamp": "2025-02-26T06:04:49.942061Z",
+        "heartRate": 64,
+        "hrv": 74,
+        "sleep": "REM",
+        "steps": 9392
+    },
+    {
+        "user_id": "P004",
+        "timestamp": "2025-02-26T09:04:49.942067Z",
+        "heartRate": 82,
+        "hrv": 52,
+        "sleep": "REM",
+        "steps": 827
+    },
+    {
+        "user_id": "P004",
+        "timestamp": "2025-02-26T19:04:49.942074Z",
+        "heartRate": 98,
+        "hrv": 50,
+        "sleep": "light",
+        "steps": 4482
+    },
+    {
+        "user_id": "P004",
+        "timestamp": "2025-02-27T01:04:49.942081Z",
+        "heartRate": 86,
+        "hrv": 25,
+        "sleep": "light",
+        "steps": 1511
+    },
+    {
+        "user_id": "P004",
+        "timestamp": "2025-02-26T04:04:49.942088Z",
+        "heartRate": 70,
+        "hrv": 70,
+        "sleep": "deep",
+        "steps": 7090
+    }
+]

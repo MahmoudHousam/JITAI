@@ -86,7 +86,6 @@ def detect_events(patient_data, diagnoses):
     return nudges
 
 
-# Process each patient
 diabetic_diagnosis = get_diagnoses(diabetic_high_risk_glucose_spikes)
 heart_failure_diagnosis = get_diagnoses(heart_failure_low_hrv)
 hypertensive_diagnosis = get_diagnoses(hypertensive_missed_medication)
@@ -97,7 +96,7 @@ hypertensive_nudges = detect_events(
     hypertensive_missed_medication, hypertensive_diagnosis
 )
 
-# Print nudges
-print("Samer's Nudges:", diabetic_nudges)
-print("Layla's Nudges:", heart_failure_nudges)
-print("Ali's Nudges:", hypertensive_nudges)
+
+print("Patient abc-123 Nudges:", diabetic_nudges)
+print("Patient def-456 Nudges:", heart_failure_nudges)
+print("Patient ghi-789 Nudges:", hypertensive_nudges)

@@ -1,0 +1,162 @@
+[
+    {
+        "user_id": "P001",
+        "timestamp": "2025-02-26T04:04:49.947912Z",
+        "bpm": 80,
+        "hrv": 31,
+        "sleep_score": 60,
+        "steps_taken": 4088
+    },
+    {
+        "user_id": "P001",
+        "timestamp": "2025-02-26T22:04:49.947956Z",
+        "bpm": 60,
+        "hrv": 99,
+        "sleep_score": 90,
+        "steps_taken": 4324
+    },
+    {
+        "user_id": "P001",
+        "timestamp": "2025-02-26T21:04:49.947968Z",
+        "bpm": 66,
+        "hrv": 36,
+        "sleep_score": 90,
+        "steps_taken": 2217
+    },
+    {
+        "user_id": "P001",
+        "timestamp": "2025-02-26T08:04:49.947977Z",
+        "bpm": 99,
+        "hrv": 36,
+        "sleep_score": 80,
+        "steps_taken": 4714
+    },
+    {
+        "user_id": "P001",
+        "timestamp": "2025-02-26T16:04:49.947984Z",
+        "bpm": 65,
+        "hrv": 31,
+        "sleep_score": 60,
+        "steps_taken": 8573
+    },
+    {
+        "user_id": "P002",
+        "timestamp": "2025-02-26T17:04:49.947992Z",
+        "bpm": 71,
+        "hrv": 49,
+        "sleep_score": 80,
+        "steps_taken": 4054
+    },
+    {
+        "user_id": "P002",
+        "timestamp": "2025-02-26T08:04:49.947999Z",
+        "bpm": 69,
+        "hrv": 98,
+        "sleep_score": 90,
+        "steps_taken": 8482
+    },
+    {
+        "user_id": "P002",
+        "timestamp": "2025-02-26T02:04:49.948006Z",
+        "bpm": 75,
+        "hrv": 20,
+        "sleep_score": 90,
+        "steps_taken": 3119
+    },
+    {
+        "user_id": "P002",
+        "timestamp": "2025-02-26T18:04:49.948013Z",
+        "bpm": 71,
+        "hrv": 35,
+        "sleep_score": 90,
+        "steps_taken": 9618
+    },
+    {
+        "user_id": "P002",
+        "timestamp": "2025-02-26T18:04:49.948020Z",
+        "bpm": 70,
+        "hrv": 20,
+        "sleep_score": 60,
+        "steps_taken": 5223
+    },
+    {
+        "user_id": "P003",
+        "timestamp": "2025-02-27T00:04:49.948027Z",
+        "bpm": 62,
+        "hrv": 36,
+        "sleep_score": 90,
+        "steps_taken": 9920
+    },
+    {
+        "user_id": "P003",
+        "timestamp": "2025-02-26T05:04:49.948034Z",
+        "bpm": 64,
+        "hrv": 99,
+        "sleep_score": 60,
+        "steps_taken": 5361
+    },
+    {
+        "user_id": "P003",
+        "timestamp": "2025-02-26T04:04:49.948040Z",
+        "bpm": 82,
+        "hrv": 92,
+        "sleep_score": 90,
+        "steps_taken": 5920
+    },
+    {
+        "user_id": "P003",
+        "timestamp": "2025-02-26T06:04:49.948047Z",
+        "bpm": 69,
+        "hrv": 22,
+        "sleep_score": 80,
+        "steps_taken": 9263
+    },
+    {
+        "user_id": "P003",
+        "timestamp": "2025-02-26T19:04:49.948053Z",
+        "bpm": 87,
+        "hrv": 100,
+        "sleep_score": 90,
+        "steps_taken": 3289
+    },
+    {
+        "user_id": "P004",
+        "timestamp": "2025-02-26T18:04:49.948060Z",
+        "bpm": 68,
+        "hrv": 93,
+        "sleep_score": 80,
+        "steps_taken": 3982
+    },
+    {
+        "user_id": "P004",
+        "timestamp": "2025-02-26T08:04:49.948067Z",
+        "bpm": 64,
+        "hrv": 41,
+        "sleep_score": 90,
+        "steps_taken": 3457
+    },
+    {
+        "user_id": "P004",
+        "timestamp": "2025-02-26T18:04:49.948073Z",
+        "bpm": 71,
+        "hrv": 31,
+        "sleep_score": 80,
+        "steps_taken": 9053
+    },
+    {
+        "user_id": "P004",
+        "timestamp": "2025-02-26T15:04:49.948080Z",
+        "bpm": 66,
+        "hrv": 95,
+        "sleep_score": 60,
+        "steps_taken": 9801
+    },
+    {
+        "user_id": "P004",
+        "timestamp": "2025-02-26T21:04:49.948087Z",
+        "bpm": 92,
+        "hrv": 94,
+        "sleep_score": 80,
+        "steps_taken": 8123
+    }
+]

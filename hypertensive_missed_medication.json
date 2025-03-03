@@ -1,7 +1,7 @@
 [
     {
         "resourceType": "Patient",
-        "id": "ali-789",
+        "id": "ghi-789",
         "gender": "male",
         "birthDate": "1990-07-22",
         "extension": [
@@ -56,7 +56,7 @@
             }
         ],
         "subject": {
-            "reference": "Patient/ali-789"
+            "reference": "Patient/ghi-789"
         },
         "effectiveDateTime": "2023-10-05T12:00:00Z",
         "extension": [
@@ -84,7 +84,7 @@
             ]
         },
         "subject": {
-            "reference": "Patient/ali-789"
+            "reference": "Patient/ghi-789"
         },
         "taken": "n",
         "effectivePeriod": {

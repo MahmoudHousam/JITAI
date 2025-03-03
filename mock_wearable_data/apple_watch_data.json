@@ -1,0 +1,162 @@
+[
+    {
+        "user_id": "P001",
+        "timestamp": "2025-02-26T08:04:49.940638Z",
+        "heart_rate_bpm": 63,
+        "hrv_ms": 37,
+        "sleep_stage": "light",
+        "steps_count": 9717
+    },
+    {
+        "user_id": "P001",
+        "timestamp": "2025-02-26T12:04:49.940699Z",
+        "heart_rate_bpm": 69,
+        "hrv_ms": 79,
+        "sleep_stage": "light",
+        "steps_count": 5637
+    },
+    {
+        "user_id": "P001",
+        "timestamp": "2025-02-26T13:04:49.940713Z",
+        "heart_rate_bpm": 65,
+        "hrv_ms": 21,
+        "sleep_stage": "deep",
+        "steps_count": 7780
+    },
+    {
+        "user_id": "P001",
+        "timestamp": "2025-02-26T18:04:49.940722Z",
+        "heart_rate_bpm": 77,
+        "hrv_ms": 45,
+        "sleep_stage": "REM",
+        "steps_count": 9051
+    },
+    {
+        "user_id": "P001",
+        "timestamp": "2025-02-26T11:04:49.940730Z",
+        "heart_rate_bpm": 94,
+        "hrv_ms": 83,
+        "sleep_stage": "REM",
+        "steps_count": 4588
+    },
+    {
+        "user_id": "P002",
+        "timestamp": "2025-02-26T18:04:49.940739Z",
+        "heart_rate_bpm": 93,
+        "hrv_ms": 99,
+        "sleep_stage": "light",
+        "steps_count": 1284
+    },
+    {
+        "user_id": "P002",
+        "timestamp": "2025-02-26T05:04:49.940746Z",
+        "heart_rate_bpm": 92,
+        "hrv_ms": 51,
+        "sleep_stage": "light",
+        "steps_count": 8519
+    },
+    {
+        "user_id": "P002",
+        "timestamp": "2025-02-26T21:04:49.940753Z",
+        "heart_rate_bpm": 74,
+        "hrv_ms": 71,
+        "sleep_stage": "deep",
+        "steps_count": 3290
+    },
+    {
+        "user_id": "P002",
+        "timestamp": "2025-02-26T09:04:49.940760Z",
+        "heart_rate_bpm": 61,
+        "hrv_ms": 51,
+        "sleep_stage": "light",
+        "steps_count": 9908
+    },
+    {
+        "user_id": "P002",
+        "timestamp": "2025-02-26T09:04:49.940766Z",
+        "heart_rate_bpm": 78,
+        "hrv_ms": 25,
+        "sleep_stage": "light",
+        "steps_count": 152
+    },
+    {
+        "user_id": "P003",
+        "timestamp": "2025-02-26T15:04:49.940777Z",
+        "heart_rate_bpm": 60,
+        "hrv_ms": 39,
+        "sleep_stage": "light",
+        "steps_count": 2303
+    },
+    {
+        "user_id": "P003",
+        "timestamp": "2025-02-26T13:04:49.940784Z",
+        "heart_rate_bpm": 62,
+        "hrv_ms": 80,
+        "sleep_stage": "light",
+        "steps_count": 715
+    },
+    {
+        "user_id": "P003",
+        "timestamp": "2025-02-26T09:04:49.940791Z",
+        "heart_rate_bpm": 98,
+        "hrv_ms": 94,
+        "sleep_stage": "REM",
+        "steps_count": 5097
+    },
+    {
+        "user_id": "P003",
+        "timestamp": "2025-02-26T11:04:49.940798Z",
+        "heart_rate_bpm": 74,
+        "hrv_ms": 21,
+        "sleep_stage": "light",
+        "steps_count": 1113
+    },
+    {
+        "user_id": "P003",
+        "timestamp": "2025-02-26T09:04:49.940804Z",
+        "heart_rate_bpm": 89,
+        "hrv_ms": 71,
+        "sleep_stage": "deep",
+        "steps_count": 1963
+    },
+    {
+        "user_id": "P004",
+        "timestamp": "2025-02-26T03:04:49.940811Z",
+        "heart_rate_bpm": 71,
+        "hrv_ms": 36,
+        "sleep_stage": "deep",
+        "steps_count": 1943
+    },
+    {
+        "user_id": "P004",
+        "timestamp": "2025-02-26T09:04:49.940821Z",
+        "heart_rate_bpm": 72,
+        "hrv_ms": 44,
+        "sleep_stage": "deep",
+        "steps_count": 5710
+    },
+    {
+        "user_id": "P004",
+        "timestamp": "2025-02-27T01:04:49.940828Z",
+        "heart_rate_bpm": 72,
+        "hrv_ms": 63,
+        "sleep_stage": "light",
+        "steps_count": 513
+    },
+    {
+        "user_id": "P004",
+        "timestamp": "2025-02-26T13:04:49.940835Z",
+        "heart_rate_bpm": 72,
+        "hrv_ms": 83,
+        "sleep_stage": "REM",
+        "steps_count": 2468
+    },
+    {
+        "user_id": "P004",
+        "timestamp": "2025-02-26T11:04:49.940842Z",
+        "heart_rate_bpm": 90,
+        "hrv_ms": 54,
+        "sleep_stage": "REM",
+        "steps_count": 4968
+    }
+]
