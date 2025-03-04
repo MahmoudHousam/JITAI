@@ -1,5 +1,7 @@
+from flask import Flask, jsonify, request
 import json
 
+app = Flask(__name__)
 
 with open("diabetic_high_risk_glucose_spikes.json") as f:
     diabetic_high_risk_glucose_spikes = json.load(f)
@@ -59,7 +61,7 @@ def detect_events(patient_data, diagnoses):
             # Glucose spike
             elif resource["code"]["coding"][0]["code"] == "2339-0":  # Glucose
                 glucose_value = resource["valueQuantity"]["value"]
-                if glucose_value > 200:  # Example threshold
+                if glucose_value > 150:  # Example threshold
                     severity = resource["extension"][0]["valueDecimal"]
                     risk_score = severity * WEIGHTS["glucose"]
                     # Increase risk for diabetic patients
@@ -79,24 +81,31 @@ def detect_events(patient_data, diagnoses):
                 nudges.append(
                     {
                         "patient": resource["subject"]["reference"],
-                        "message": "You missed a medication dose. Please take it soon.",
+                        "message": "You missed a medication dose. This is life threatening. Please take ASAP.",
                         "risk_score": risk_score,
                     }
                 )
     return nudges
 
 
-diabetic_diagnosis = get_diagnoses(diabetic_high_risk_glucose_spikes)
-heart_failure_diagnosis = get_diagnoses(heart_failure_low_hrv)
-hypertensive_diagnosis = get_diagnoses(hypertensive_missed_medication)
+# Flask endpoint to process patient data
+@app.route("/nudges", methods=["POST"])
+def get_nudges():
+    patient_id = request.json.get("patient_id")
+    if patient_id == "abc-123":
+        patient_data = diabetic_high_risk_glucose_spikes
+    elif patient_id == "def-456":
+        patient_data = heart_failure_low_hrv
+    elif patient_id == "ghi-789":
+        patient_data = hypertensive_missed_medication
+    else:
+        return jsonify({"error": "Patient not found"}), 404
 
-diabetic_nudges = detect_events(diabetic_high_risk_glucose_spikes, diabetic_diagnosis)
-heart_failure_nudges = detect_events(heart_failure_low_hrv, heart_failure_diagnosis)
-hypertensive_nudges = detect_events(
-    hypertensive_missed_medication, hypertensive_diagnosis
-)
+    diagnoses = get_diagnoses(patient_data)
+    nudges = detect_events(patient_data, diagnoses)
+    return jsonify(nudges)
 
 
-print("Patient abc-123 Nudges:", diabetic_nudges)
-print("Patient def-456 Nudges:", heart_failure_nudges)
-print("Patient ghi-789 Nudges:", hypertensive_nudges)
+# Run the Flask app
+if __name__ == "__main__":
+    app.run(debug=True)
